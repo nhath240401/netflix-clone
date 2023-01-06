@@ -1,12 +1,25 @@
-import React from 'react';
-import './App.css';
-import HomeScreen from './components/HomeScreen';
+import React from "react";
+import "./App.css";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  const user = null;
   return (
-    <>
-      <HomeScreen />
-    </>
+    <Router>
+      {!user ? (
+        <SignUp />
+      ) : (
+        <Routes>
+          <Route path="/">
+            <Route index element={Home} />
+          </Route>
+        </Routes>
+      )}
+    </Router>
   );
 }
 

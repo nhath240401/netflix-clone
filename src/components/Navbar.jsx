@@ -17,7 +17,7 @@ const Navbar = () => {
   },[])
 
   return (
-    <div className={`fixed top-0 w-[100%] p-2 h-16 z-1 transition-all ${show && "bg-[#111]"}`}>
+    <div className={`fixed top-0 w-[100%] p-2 h-16 z-20 transition-all ${show && "bg-[#111]"}`}>
       <div className="flex justify-between">
         <img
           src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
